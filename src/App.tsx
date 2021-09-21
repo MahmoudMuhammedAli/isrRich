@@ -23,7 +23,9 @@ function App() {
 			.then(() => setOpen(true));
 	}
 	const changePublicKey = (e: React.FormEvent<HTMLInputElement>) => {
-		setAddress(e.currentTarget.value);
+		let handler = 	e.currentTarget.value; 
+		setAddress(handler);
+		handler.length===42 ? setError(false) : setError(true); 
 	};
 	const handleClose = () => setOpen(false);
 	useEffect(
@@ -49,7 +51,7 @@ function App() {
 						style={{border:error?  "2px solid #ff0000":" 2px solid #ffe134"}}
 						required
 					/>
-					<button type="submit" className="submit" onClick={howMuch} disabled={!address}>
+					<button type="submit" className="submit" onClick={howMuch} disabled={error}>
 						isRich?
 					</button>
 				</div>
@@ -60,7 +62,7 @@ function App() {
 					aria-describedby="modal-modal-description"
 				>
 					{error ? (
-						<h1>Enter a valid pirivate key</h1>
+						<h1>Enter a valid private key</h1>
 					) : (
 						<div className="modal">
 							<div className="left">

@@ -51,7 +51,7 @@ function App() {
 						style={{border:error?  "2px solid #ff0000":" 2px solid #ffe134"}}
 						required
 					/>
-					<button type="submit" className="submit" onClick={howMuch} disabled={error}>
+					<button type="submit" className="submit" onClick={howMuch}   disabled={error}>
 						isRich?
 					</button>
 				</div>

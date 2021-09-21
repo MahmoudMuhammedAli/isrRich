@@ -3,9 +3,8 @@ import Web3 from 'web3';
 import { useEffect, useState } from 'react';
 import { ReactComponent as Header } from './assets/header.svg';
 import { ReactComponent as Logo } from './assets/isrich.svg';
-import { ReactComponent as Happy } from './assets/5867.svg';
 
-import { Modal, Typography } from '@mui/material';
+import { Modal } from '@mui/material';
 const url = 'https://mainnet.infura.io/v3/e31d6b31abd249718714f1244b8628e7 ';
 const web3 = new Web3(url);
 

@@ -128,5 +128,26 @@
         }
       }
     }
+    .right{
+      display:none;
+    }
+    .left{
+      font-size:10px !important;
+      padding:10px 10px !important;
+      .modal-header{
+        color:#ffe134;
+        font-size:1rem;
+    
+      }
+      .title-2{
+        color:#65C7CE;
+        font-size:.5rem;
+      }
+      .amount{
+        color:#90D689;
+        font-size:.5rem;
+      }
+    }
   }
+
 }

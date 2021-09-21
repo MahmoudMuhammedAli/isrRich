@@ -17,7 +17,7 @@ function App() {
 		await web3.eth
 			.getBalance(address, (err: any, bal: string) => {
 				err && setError(true);
-				let temp: number = Number(web3.utils.fromWei(bal, 'ether'));
+				let temp: number = Number(web3.utils.fromWei(bal, 'ether')); 
 				setBalance(temp);
 			})
 			.then(() => setOpen(true));
@@ -43,9 +43,10 @@ function App() {
 						type="text"
 						name=""
 						id=""
-						placeholder="Public Key"
+						placeholder="Ethereum Address"
 						value={address}
 						onChange={changePublicKey}
+						style={{border:error?  "2px solid #ff0000":" 2px solid #ffe134"}}
 						required
 					/>
 					<button type="submit" className="submit" onClick={howMuch} disabled={!address}>
